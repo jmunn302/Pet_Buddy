@@ -1,8 +1,8 @@
 class AddUserInfo < ActiveRecord::Migration[7.0]
   def change
-    add_column :first_name
-    add_column :last_name
-    add_column :address
-    add_colums :bio, :text
+    add_column :users, :first_name, :string
+    add_column :users, :last_name, :string
+    add_column :users, :address, :string
+    add_column :users, :bio, :text
   end
 end

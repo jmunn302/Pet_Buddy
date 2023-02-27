@@ -31,6 +31,8 @@ gem "jbuilder"
 gem "redis", "~> 4.0"
 
 gem "devise"
+
+gem "dotenv-rails", groups: [:development, :test]
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
@@ -45,6 +47,8 @@ gem "bootsnap", require: false
 
 # Use Sass to process CSS
 gem "sassc-rails"
+
+gem "cloudinary"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"

@@ -1,11 +1,22 @@
 <div class=container>
-  <h1><%= User %><h1>
-  <h2><%= Name %></h2>
-  <h2><%= @user.first_name @user.last_name %></h2>
-  <h2><%= Address %></h2>
-  <h2><%= @user.address %></h2>
-  <h2><%= Bio %></h2>
-  <p><%= @user.bio %></p>
+  <div>
+    <h1><%= User %><h1>
+  </div>
+  <div>
+    <h2><%= Name %></h2>
+    <h2><%= @user.first_name @user.last_name %></h2>
+  </div>
+  <div>
+    <h2><%= Address %></h2>
+    <h2><%= @user.address %></h2>
+  </div>
+  <div>
+    <h2><%= Bio %></h2>
+    <p><%= @user.bio %></p>
+  </div>
+  <div>
+  <%=  %></div>
+  </div>
   <h2><%= User Name %></h2>
   <p><%= @user.username %></p>
 </div>

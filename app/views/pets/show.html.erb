@@ -1,0 +1,26 @@
+<h1><%= @pet.name %></h1>
+<div>
+  <strong>Species:</strong>
+  <%= @pet.species %>
+</div>
+<div>
+  <strong>Age:</strong>
+  <%= @pet.age %>
+</div>
+<div>
+  <strong>Gender:</strong>
+  <%= @pet.gender %>
+</div>
+<div>
+  <strong>Description:</strong>
+  <%= @pet.description %>
+</div>
+<div>
+  <strong>Special Notes:</strong>
+  <%= @pet.special_notes %>
+</div>
+<div>
+  <strong>Price:</strong>
+  <%= @pet.price %>
+</div>
+<%= link_to "Rent this pet", new_rental_path(pet_id: @pet.id), class: "btn btn-primary" %>

@@ -1,17 +1,22 @@
 
+<div id="pets-banner">
+<h1>Check out the amazing creatures available for rent!
+</h1>
+</div>
 <div class="container">
+
 <div class="d-flex flex-wrap">
 <% @pets.each do |pet| %>
-  <div class="card mb-2 mx-1" style="width: 18rem;">
-  <img src="https://source.unsplash.com/random/500x500/?animal">
-  <h2> Name: <%= pet.name %> </h2>
-  <p class="card-body">Species: <%= pet.species %> <p>
-  <p class="card-body">Description: <%= pet.description %></p>
-  </br>
-  <p class="card-body">Gender: <%= pet.gender %> </p>
-  <p class="card-body">Age: <%= pet.age %> years old</p>
-  <p class="card-body">Special Notes: <%= pet.special_notes %></p>
-  <p class="card-body">Price: $<%= pet.price %></p>
+  <div class="pet-card my-3 mx-3" style="width: 18rem;">
+  <div class="pet-image">
+  <h4><%= pet.name %> </h4>
+  </div>
+  <div class="pet-text">
+  <div class="d-flex justify-content-around">
+  <p class="card-text"><strong>Species:</strong> <%= pet.species %> <p>
+  <p class="card-text"><strong>Price:</strong> $<%= pet.price %></p>
+  </div>
+  </div>
   </div>
   <% end %>
   </div>

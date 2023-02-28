@@ -1,22 +1,59 @@
-<div class=container>
-  <div>
-    <h1><%= User %><h1>
+<div>
+NAVBAR HERE</div>
+<div class="container">
+  <div class="row">
+    <div class="col">
   </div>
-  <div>
-    <h2><%= Name %></h2>
-    <h2><%= @user.first_name @user.last_name %></h2>
+  <div class="row">
+    <div class="col">
+      <div>
+        <h2>Owner</h2>
+        <img class="rounded-circle  shadow p-1 mb-2 bg-white rounded" src="https://source.unsplash.com/random/300x300/?face" width="150">
+        </div>
+        <div>
+          <h2><strong><%= @user.first_name %> <%= @user.last_name %></strong></h2>
+        </div>
+        <div>
+          <h3>Address:</h3>
+          <h3><%= @user.address %></h3>
+        </div>
+        <div>
+          <p><%= @user.email %></p>
+        </div>
+        <div>
+          <h3>Bio:</h3>
+          <p><%= @user.bio %></p>
+        </div>
+    </div>
+    <div class="col">
+      <div>
+        <h2>Pets</h2>
+        <img class="rounded-square shadow p-1 mb-2 bg-white rounded" src="https://source.unsplash.com/random/300x300/?pets" width="150">
+        </div>
+        <div>
+          <h2><strong>Bruce</strong></h2>
+        </div>
+        <div>
+          <p><strong>Species: </strong>Bat-Cat</p>
+        </div>
+        <div>
+          <p><strong>Gender: </strong>Male</p>
+        </div>
+        <div>
+          <p><strong>Desription: </strong>Very sweet with humans</p>
+        </div>
+        <div>
+          <p><strong>Notes: </strong>He like blood</p>
+        </div>
+        <div>
+          <p><strong>Price: </strong>200€</p>
+        </div>
+    </div>
+    <div class="col">
+      <div class="col">
+        <div>
+          <h2>Bookings</h2>
+        </div>
+    </div>
   </div>
-  <div>
-    <h2><%= Address %></h2>
-    <h2><%= @user.address %></h2>
-  </div>
-  <div>
-    <h2><%= Bio %></h2>
-    <p><%= @user.bio %></p>
-  </div>
-  <div>
-  <%=  %></div>
-  </div>
-  <h2><%= User Name %></h2>
-  <p><%= @user.username %></p>
 </div>

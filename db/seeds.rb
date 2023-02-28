@@ -6,8 +6,9 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 puts 'Deleting db'
+Pet.destroy_all
 User.destroy_all
-Pet.destroy.all
+
 
 
 require "open-uri"

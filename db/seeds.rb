@@ -7,18 +7,25 @@
 #   Character.create(name: "Luke", movie: movies.first)
 puts 'Deleting db'
 User.destroy_all
+Pet.destroy.all
 
 
 require "open-uri"
 
 20.times do
-  puts 'Opening unsplash'
   file = URI.open("https://source.unsplash.com/random/300x300/?face")
-  puts file
-  puts 'Creating user'
   user = User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email: Faker::Internet.email, password: Faker::Internet.password(min_length: 8), address: Faker::Address.city, bio: Faker::Lorem.word )
-  puts user.id
-  puts 'Attaching photo'
   user.photo.attach(io: file, filename: user.first_name, content_type: "image/jpg")
-  puts 'done!'
+end
+
+@users = User.all
+ids = []
+@users.each do |user|
+  ids << user.id
+end
+
+20.times do
+puts "creating pets"
+pet = Pet.create!(name: Faker::Artist.name, species: ["Yeti", "Dragon", "Unicorn", "Robot", "Dinosaur", "Monster"].sample, gender: Faker::Gender.type, age: Faker::Number.number(digits: 2), description: Faker::Lorem.word, special_notes: Faker::Lorem.word, price: Faker::Number.number(digits: 2), user_id: ids.sample)
+puts "pets created"
 end

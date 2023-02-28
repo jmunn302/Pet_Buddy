@@ -1,0 +1,18 @@
+
+<div class="container">
+<div class="d-flex flex-wrap">
+<% @pets.each do |pet| %>
+  <div class="card mb-2 mx-1" style="width: 18rem;">
+  <img src="https://source.unsplash.com/random/500x500/?animal">
+  <h2> Name: <%= pet.name %> </h2>
+  <p class="card-body">Species: <%= pet.species %> <p>
+  <p class="card-body">Description: <%= pet.description %></p>
+  </br>
+  <p class="card-body">Gender: <%= pet.gender %> </p>
+  <p class="card-body">Age: <%= pet.age %> years old</p>
+  <p class="card-body">Special Notes: <%= pet.special_notes %></p>
+  <p class="card-body">Price: $<%= pet.price %></p>
+  </div>
+  <% end %>
+  </div>
+</div>

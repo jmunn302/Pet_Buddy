@@ -2,8 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Quicksand:wght@400;700&display=swap');
 
   /* Add CSS styles to center the content and change the font */
-  body {
+  .full-page {
+    margin: 0 0;
     height: 100vh;
+    padding-top: 200px;
     flex-direction: column;
     background-image: url("https://res.cloudinary.com/dobohmdlf/image/upload/v1677583362/funny-play-dough-shapes_q7ezrr.jpg");
     background-size: cover;
@@ -17,7 +19,6 @@
     margin-left: 150px;
     left: 1em;
     margin-bottom: 30px;
-    margin-top: 200px;
   }
 
   p {

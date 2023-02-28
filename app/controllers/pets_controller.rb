@@ -15,7 +15,7 @@ class PetsController < ApplicationController
 
     def edit
     end
-    
+
 
     def create
       @pet = Pet.new(pet_params)
@@ -48,5 +48,4 @@ class PetsController < ApplicationController
       def pet_params
         params.require(:pet).permit(:name, :species, :age, :gender, :description, :special_notes, :price)
       end
-
 end

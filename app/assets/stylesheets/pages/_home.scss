@@ -1,1 +1,71 @@
 // Specific CSS for your home-page
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Quicksand:wght@400;700&display=swap');
+
+  /* Add CSS styles to center the content and change the font */
+  body {
+    height: 100vh;
+    flex-direction: column;
+    background-image: url("https://res.cloudinary.com/dobohmdlf/image/upload/v1677583362/funny-play-dough-shapes_q7ezrr.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+
+  h1 {
+    font-family: 'Quicksand', sans-serif;
+    color: whitesmoke;
+    font-size: 5em;
+    margin-left: 150px;
+    left: 1em;
+    margin-bottom: 30px;
+    margin-top: 200px;
+  }
+
+  p {
+    font-size: 1.5em;
+  }
+
+  .button-container {
+    margin-left: 180px;
+  }
+
+  .btn-custom {
+    margin: 15px;
+    background-color: #e1abb6;
+    border-color: #ccaab1;
+    border-radius: 6%;
+    transition: transform 0.2s ease-in-out;
+    color: whitesmoke;
+  }
+
+.btn-custom:hover {
+  background-color: #c88894;
+  border-color: #c88894;
+  border-radius: 6%;
+  transition: transform 0.2s ease-in-out;
+  transform: scale(1.1);
+  color: whitesmoke;
+}
+
+
+.button_2-container {
+  margin-right: 4em;
+}
+
+.btn-primary_2 {
+  margin-left: 1110px;
+  margin-top: 150px;
+  background-color: #e1abb6;
+  border-color: #ccaab1;
+  border-radius: 6%;
+  transition: transform 0.2s ease-in-out;
+  color: whitesmoke;
+}
+
+.btn-primary_2:hover {
+  background-color: #c88894;
+  border-color: #c88894;
+  color: whitesmoke;
+  border-radius: 6%;
+  transition: transform 0.2s ease-in-out;
+  transform: scale(1.1);
+}

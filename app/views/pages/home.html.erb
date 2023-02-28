@@ -1,31 +1,11 @@
 
-<style>
-  /* Add CSS styles to center the content and change the font */
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    font-family: Arial, sans-serif;
-    flex-direction: column;
-  }
-  h1 {
-    font-size: 3em;
-    flex-direction: column;
-  }
-  p {
-    font-size: 1.5em;
-    margin-top: 10px;
-  }
+  <h1><strong>FauxPaws</strong></h1>
 
-  .btn-primary {
-    margin: 15px;
-    background-color: blue;
+  <div class="button-container">
+    <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-custom" %>
+    <%= link_to "Sign In", new_user_session_path, class: "btn btn-custom" %>
+  </div>
 
-  }
-
-</style>
-
-<h1>FauxPaws</h1>
-<%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary" %>
-<%= link_to "Log In", new_user_session_path, class: "btn btn-secondary" %>
+<div class="button_2-container">
+  <%= link_to "Explore ->", pets_path, class: "btn btn-primary_2" %>
+</div>

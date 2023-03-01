@@ -29,19 +29,20 @@
         <img class="rounded-square shadow p-1 mb-2 bg-white rounded" src="https://source.unsplash.com/random/300x300/?pets" width="150">
         </div>
         <div>
-          <h2><strong>Bruce</strong></h2>
+        <% @user.pets.each do |pet| %>
+          <h2> <%= pet.name %> </h2>
+          <img class="rounded-circle  shadow p-1 mb-2 bg-white rounded" src="<%= pet.photo.url %>" width="150">
+          <p> <%= pet.description %> </p>
+          <p> <%= pet.species %> </p>
+          <p> <%= pet.gender %> </p>
+          <p> <%= pet.special_notes %> </p>
+          <p> <%= pet.price %> </p>
+        <% end %>
         </div>
-
-          <p><strong>Species: </strong>Bat-Cat</p>
-          <p><strong>Gender: </strong>Male</p>
-          <p><strong>Desription: </strong>Very sweet with humans</p>
-          <p><strong>Notes: </strong>He like blood</p>
-          <p><strong>Price: </strong>200€</p>
     </div>
     <div class="col">
-      <div class="col">
         <div>
-          <h2>Bookings</h2>
+          <h2>My Booking Request</h2>
         </div>
     </div>
   </div>

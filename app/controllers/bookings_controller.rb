@@ -5,6 +5,7 @@ class BookingsController < ApplicationController
   def new
     @pet = Pet.find(params[:pet_id])
     @booking = Booking.new(start_date: Date.today, end_date: Date.today)
+    authorize @pet
   end
 
   def create

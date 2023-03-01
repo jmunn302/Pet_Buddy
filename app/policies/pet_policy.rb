@@ -12,6 +12,11 @@ class PetPolicy < ApplicationPolicy
       # ...
     end
   end
+
+  def new?
+    true
+  end
+
   def show?
     true
   end

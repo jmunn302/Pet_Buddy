@@ -13,13 +13,6 @@ class PetPolicy < ApplicationPolicy
     end
   end
 
-<<<<<<< HEAD
-  def new?
-    true
-  end
-
-=======
->>>>>>> 796d0a323b1e2de121b1d0b3ffd1920635b0a382
   def show?
     true
   end

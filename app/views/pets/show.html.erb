@@ -1,4 +1,5 @@
-<h1><%= @pet.name %></h1>
+<h2 style="color:black, text-align: left"><%= @pet.name %></h2>
+<img src="<%= @pet.photo.url %>" style="width: 500px">
 <div>
   <strong>Species:</strong>
   <%= @pet.species %>
@@ -21,6 +22,6 @@
 </div>
 <div>
   <strong>Price:</strong>
-  <%= @pet.price %>
+  <p>$<%= @pet.price %></p>
 </div>
-<%= link_to "Rent this pet", new_rental_path(pet_id: @pet.id), class: "btn btn-primary" %>
+<%= link_to "Book this creature",  pet_booking_index_path(@pet), class: "btn btn-primary" %>

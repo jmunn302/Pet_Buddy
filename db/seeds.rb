@@ -96,15 +96,3 @@ pet.photo.attach(io: file, filename: pet.name, content_type: "image/jpg")
 file = URI.open("app/assets/images/elf28.png")
 pet = Pet.create!(name: Faker::Creature::Dog.name, species: "Gnome", gender: Faker::Gender.type, age: Faker::Number.number(digits: 2), description: "Writes beat poetry, and then performs it via interpretive dance.", special_notes: "Never wakes up before 10 am.", price: Faker::Number.number(digits: 2), user_id: ids.sample)
 pet.photo.attach(io: file, filename: pet.name, content_type: "image/png")
-
-file = URI.open("app/assets/images/blue-cute-cartoon-funny-monster-with-juice-white.jpg")
-pet = Pet.create!(name: Faker::Creature::Dog.name, species: "Monster", gender: Faker::Gender.type, age: Faker::Number.number(digits: 2), description: "Quiet, shy, but an amazing chef!", special_notes: "Published author", price: Faker::Number.number(digits: 2), user_id: ids.sample)
-pet.photo.attach(io: file, filename: pet.name, content_type: "image/png")
-
-file = URI.open("app/assets/images/big-robot-3d-illustration.jpg")
-pet = Pet.create!(name: Faker::Creature::Dog.name, species: "Robot", gender: Faker::Gender.type, age: Faker::Number.number(digits: 2), description: "Beep beep boop boop bop bop beeeeeeeep", special_notes: "110100111000111", price: Faker::Number.number(digits: 2), user_id: ids.sample)
-pet.photo.attach(io: file, filename: pet.name, content_type: "image/png")
-
-file = URI.open("app/assets/images/3d-rendering-yeti3.jpg")
-pet = Pet.create!(name: Faker::Creature::Dog.name, species: "Yeti", gender: Faker::Gender.type, age: Faker::Number.number(digits: 2), description: "Loves love, loves friends, loves to love friends", special_notes: "Just wants to snuggle", price: Faker::Number.number(digits: 2), user_id: ids.sample)
-pet.photo.attach(io: file, filename: pet.name, content_type: "image/png")

@@ -7,6 +7,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   resources :pets do
-    resources :booking
+    resources :bookings
   end
 end

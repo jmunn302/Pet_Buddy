@@ -31,3 +31,9 @@
     margin-left: 80%;
   }
   }
+
+$mynewcolor: #F4CED7;
+
+.btn-primary {
+   @include button-variant($mynewcolor, darken($mynewcolor, 20%), darken($mynewcolor, 20%), lighten($mynewcolor,5%), lighten($mynewcolor, 10%), darken($mynewcolor,50%));
+}

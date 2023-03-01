@@ -1,27 +1,35 @@
-<h2 style="color:black, text-align: left"><%= @pet.name %></h2>
-<img src="<%= @pet.photo.url %>" style="width: 500px">
-<div>
-  <strong>Species:</strong>
-  <%= @pet.species %>
+<div class=container>
+
+  <h2 style="color:black, text-align: left"><%= @pet.name %></h2>
+  <img src="<%= @pet.photo.url %>" style="width: 500px">
+  <div>
+    <strong>Species:</strong>
+    <%= @pet.species %>
+  </div>
+  <div>
+    <strong>Age:</strong>
+    <%= @pet.age %>
+  </div>
+  <div>
+    <strong>Gender:</strong>
+    <%= @pet.gender %>
+  </div>
+  <div>
+    <strong>Description:</strong>
+    <%= @pet.description %>
+  </div>
+  <div>
+    <strong>Special Notes:</strong>
+    <%= @pet.special_notes %>
+  </div>
+  <div>
+    <strong>Price:</strong>
+    <p>$<%= @pet.price %></p>
+  </div>
+  <%= link_to "Book this creature",  pet_booking_index_path(@pet), class: "btn btn-primary" %>
+  <% if policy(@pet).edit? %>
+  <%= link_to "Edit this creature", edit_pet_path(@pet) %>
+  <% end %>
+  <%= button_to "Remove this creature", @pet, method: :delete if policy(@pet).destroy? %>
+  <%= link_to "See all pets", pets_path %>
 </div>
-<div>
-  <strong>Age:</strong>
-  <%= @pet.age %>
-</div>
-<div>
-  <strong>Gender:</strong>
-  <%= @pet.gender %>
-</div>
-<div>
-  <strong>Description:</strong>
-  <%= @pet.description %>
-</div>
-<div>
-  <strong>Special Notes:</strong>
-  <%= @pet.special_notes %>
-</div>
-<div>
-  <strong>Price:</strong>
-  <p>$<%= @pet.price %></p>
-</div>
-<%= link_to "Book this creature",  pet_booking_index_path(@pet), class: "btn btn-primary" %>

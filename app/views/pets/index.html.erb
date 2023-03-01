@@ -19,6 +19,6 @@
 </div>
 </div>
   <% end %>
-
+  <%= link_to "New pet", new_pet_path if policy(Pet).new? %>
   </div>
 </div>

@@ -1,3 +1,4 @@
+
 <div class="container">
 
 <div class="d-flex align-items-start flex-column w-75 justify-items-center m-auto">
@@ -33,3 +34,11 @@
 
 </div>
 </div>
+  <%= link_to "Book this creature",  pet_booking_index_path(@pet), class: "btn btn-primary" %>
+  <% if policy(@pet).edit? %>
+  <%= link_to "Edit this creature", edit_pet_path(@pet) %>
+  <% end %>
+  <%= button_to "Remove this creature", @pet, method: :delete if policy(@pet).destroy? %>
+  <%= link_to "See all pets", pets_path %>
+</div>
+

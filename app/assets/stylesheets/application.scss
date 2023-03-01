@@ -10,3 +10,15 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+.logo {
+
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 0;
+    text-decoration: none;
+  }

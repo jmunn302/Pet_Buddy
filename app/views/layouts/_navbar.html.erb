@@ -1,8 +1,17 @@
 <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-  <div class="container-fluid">
+  <div class="container-fluid justify-content-between">
+  <div class=" d-flex justify-content-center align-middle">
+  <%= link_to "FauxPaws", root_path, class: "logo" %>
+
+  </div>
     <form class="d-flex mx-auto">
       <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-light" type="submit">Search</button>
     </form>
+    <div>
+      <%= link_to user_path(10) do %>
+        <img class="rounded-circle mx-3" src="https://res.cloudinary.com/dobohmdlf/image/upload/v1677670706/Blobby-04_cyelkq.png" style="width: 5%">
+      <% end %>
+    </div>
   </div>
 </nav>

@@ -3,21 +3,22 @@
 <h1>Check out the amazing creatures available for rent!
 </h1>
 </div>
-<div class="container">
 
+<div class="container">
 <div class="d-flex flex-wrap">
+
 <% @pets.each do |pet| %>
-  <div class="pet-card my-3 mx-3" style="width: 18rem;">
-  <div class="pet-image">
-  <h4><%= pet.name %> </h4>
-  </div>
+  <div class="pet-card my-3 mx-3" >
+  <h4><%= link_to pet.name, pet_path(pet) %> </h4>
+  <img src="<%= pet.photo.url %>">
   <div class="pet-text">
   <div class="d-flex justify-content-around">
   <p class="card-text"><strong>Species:</strong> <%= pet.species %> <p>
   <p class="card-text"><strong>Price:</strong> $<%= pet.price %></p>
-  </div>
-  </div>
-  </div>
+</div>
+</div>
+</div>
   <% end %>
+
   </div>
 </div>

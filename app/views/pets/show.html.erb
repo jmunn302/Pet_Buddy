@@ -31,6 +31,8 @@
 
 </div>
 </div>
+
+</div>
   <%= link_to "Book this creature",  new_pet_booking_path(@pet), class: "btn btn-primary" %>
   <% if policy(@pet).edit? %>
   <%= link_to "Edit this creature", edit_pet_path(@pet) %>
@@ -38,4 +40,3 @@
   <%= button_to "Remove this creature", @pet, method: :delete if policy(@pet).destroy? %>
   <%= link_to "See all pets", pets_path %>
 </div>
-<%= link_to "Book this creature",  new_pet_booking_path(@pet), class: "btn btn-primary" %>

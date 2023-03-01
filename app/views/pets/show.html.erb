@@ -19,6 +19,8 @@
   <%= @pet.age %></p>
   <p class="text-start"><strong>Gender:</strong>
   <%= @pet.gender %></p>
+<%= link_to "Book this creature",  new_pet_booking_path(@pet), class: "btn btn-primary" %>
+
   </div>
 <div class="mb-3 me-3" style="width: 50%">
   <p class="text-start"><strong>Description:</strong>
@@ -28,11 +30,8 @@
   <p class="text-start"><strong>Price:</strong>
   $<%= @pet.price %></p>
 </div>
-<div>
-<%= link_to "Book this creature",  new_pet_booking_path(@pet), class: "btn btn-primary" %>
 </div>
 
-</div>
 </div>
 
 </div>

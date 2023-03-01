@@ -4,16 +4,20 @@ class PetsController < ApplicationController
 
     def index
       @pets = Pet.all
+      @pets = policy_scope(Pet)
     end
 
     def show
+      authorize @pet
     end
 
     def new
       @pet = Pet.new
+      authorize @pet
     end
 
     def edit
+      authorize @pet
     end
 
 
@@ -25,6 +29,7 @@ class PetsController < ApplicationController
       else
         render :new, status: :unprocessable_entity
       end
+      authorize @pet
     end
 
     def update
@@ -33,11 +38,13 @@ class PetsController < ApplicationController
       else
         render :edit, status: :unprocessable_entity
       end
+      authorize @pet
     end
 
     def destroy
       @pet.destroy
       redirect_to pets_url, notice: "Your pet was successfully removed."
+      authorize @pet
     end
 
     private

@@ -5,12 +5,14 @@ class BookingsController < ApplicationController
   def new
     @pet = Pet.find(params[:pet_id])
     @booking = Booking.new(start_date: Date.today, end_date: Date.today)
+    authorize @booking
   end
 
   def create
     @booking = Booking.new(booking_params)
     @booking.user = current_user
     @booking.pet = @pet
+    authorize @booking
 
     if @booking.save
       redirect_to @booking.pet, notice: 'Booking was successfully created.'
@@ -20,6 +22,7 @@ class BookingsController < ApplicationController
   end
 
   def show
+    authorize @booking
   end
 
   private

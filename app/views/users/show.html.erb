@@ -42,6 +42,41 @@
     <div class="col-2">
         <div>
           <h2 class="mb-3">My Booking Requests</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>User</th>
+                <th>Status</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @user.booking.each do |booking| %>
+                <tr>
+                  <td><%= booking.start_date %></td>
+                  <td><%= booking.end_date %></td>
+                  <td><%= booking.user.email %></td>
+                  <td>
+                    <% if booking.accepted? %>
+                      <span class="badge badge-success">Accepted</span>
+                     <% elsif booking.rejected? %>
+                      <span class="badge badge-danger">Rejected</span>
+                    <% else %>
+                      <span class="badge badge-warning">Pending</span>
+                    <% end %>
+                  </td>
+                  <td>
+                    <% if booking.pending? %>
+                      <%= link_to "Accept", accept_booking_path(booking), method: :put, class: "btn btn-sm btn-success" %>
+                      <%= link_to "Reject", reject_booking_path(booking), method: :put, class: "btn btn-sm btn-success" %>
+                    <% end %>
+                  </td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
         </div>
     </div>
   </div>

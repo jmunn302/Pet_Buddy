@@ -10,10 +10,17 @@
     </form>
     <div class="blobby-icon">
 
-    <%= link_to("Login", new_user_session_path) if @current_user.nil? %>
-    <%= link_to user_path(10) do %>
-      <img class="rounded-circle mx-3" src="https://res.cloudinary.com/dobohmdlf/image/upload/v1677670706/Blobby-04_cyelkq.png" style="width: 5%">
+
+    <% if current_user.nil? %>
+        <%= link_to new_user_session_path do  %>
+          <img class="rounded-circle mx-3" src="https://res.cloudinary.com/dobohmdlf/image/upload/v1677670706/Blobby-04_cyelkq.png" style="width: 8%">
+        <% end %>
+      <% else %>
+        <%= link_to user_path(current_user) do %>
+          <img class="rounded-circle mx-3" src="https://res.cloudinary.com/dobohmdlf/image/upload/v1677670706/Blobby-04_cyelkq.png" style="width: 8%">
+        <% end %>
     <% end %>
+
 
 
 

@@ -18,10 +18,6 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.pet = @pet
     authorize @booking
-<<<<<<< Updated upstream
-=======
-    # lalalalala
->>>>>>> Stashed changes
 
     if @booking.save
       redirect_to @booking.pet, notice: 'Booking was successfully created.'

@@ -97,3 +97,5 @@ pet.photo.attach(io: file, filename: pet.name, content_type: "image/jpg")
 file = URI.open("app/assets/images/elf28.png")
 pet = Pet.create!(name: Faker::Creature::Dog.name, species: "Gnome", gender: Faker::Gender.type, age: Faker::Number.number(digits: 2), description: "Writes beat poetry, and then performs it via interpretive dance.", special_notes: "Never wakes up before 10 am.", price: Faker::Number.number(digits: 2), user_id: ids.sample)
 pet.photo.attach(io: file, filename: pet.name, content_type: "image/png")
+
+puts "I'm done, yay!"

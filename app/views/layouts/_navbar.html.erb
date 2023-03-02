@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-  <div class="container-fluid justify-content-between">
+  <div class="container-fluid justify-content-between" style="height: 50px">
   <div class=" d-flex justify-content-center align-middle logo">
   <%= link_to "FauxPaws", root_path, class: "logo" %>
 
@@ -12,17 +12,13 @@
 
     <% if current_user.nil? %>
         <%= link_to new_user_session_path do  %>
-          <img class="rounded-circle mx-3" src="https://res.cloudinary.com/dobohmdlf/image/upload/v1677670706/Blobby-04_cyelkq.png" style="width: 8%">
+          <img class="rounded-circle mx-3" src="https://res.cloudinary.com/dobohmdlf/image/upload/v1677670706/Blobby-04_cyelkq.png">
         <% end %>
       <% else %>
         <%= link_to user_path(current_user) do %>
-          <img class="rounded-circle mx-3" src="https://res.cloudinary.com/dobohmdlf/image/upload/v1677670706/Blobby-04_cyelkq.png" style="width: 8%">
+          <img class="rounded-circle mx-3" src="https://res.cloudinary.com/dobohmdlf/image/upload/v1677670706/Blobby-04_cyelkq.png">
         <% end %>
     <% end %>
-
-
-
-
 
     </div>
   </div>

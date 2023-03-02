@@ -8,10 +8,11 @@
 <div class="d-flex flex-wrap">
 
 <% @pets.each do |pet| %>
+  <%= link_to pet_path(pet) do%>
   <div class="pet-card my-3 mx-3" >
-  <h4><%= link_to pet.name, pet_path(pet) %> </h4>
+    <h4><%= pet.name %></h4>
   <% if pet.photo.key != nil %>
-    <%= cl_image_tag pet.photo.key %>
+    <%= cl_image_tag pet.photo.key, class: "index-img" %>
   <% end %>
   <div class="pet-text">
   <div class="d-flex justify-content-around">
@@ -20,6 +21,7 @@
 </div>
 </div>
 </div>
+  <% end %>
   <% end %>
   <%= link_to "New pet", new_pet_path if policy(Pet).new? %>
   </div>

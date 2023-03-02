@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 puts 'Deleting db'
+Booking.destroy_all
 Pet.destroy_all
 User.destroy_all
 
@@ -38,7 +39,7 @@ pet = Pet.create!(name: "Sara", species: "Dragon", gender: "Female", age: 32, de
 pet.photo.attach(io: file, filename: "sara.jpg", content_type: "image/jpg")
 
 file = URI.open("app/assets/images/fun-unicorn-3d-illustration3.jpg")
-pet = Pet.create!(name: "Gonzolo", species: "Unicorn", gender: "Male", age: 35, description: "Your new unicorn bestie! Loves music, art and especially DANCING!", special_notes: "Bit of a sweet tooth, but willing to share", price: Faker::Number.number(digits: 2), user_id: ids.sample)
+pet = Pet.create!(name: "Gonzalo", species: "Unicorn", gender: "Male", age: 35, description: "Your new unicorn bestie! Loves music, art and especially DANCING!", special_notes: "Bit of a sweet tooth, but willing to share", price: Faker::Number.number(digits: 2), user_id: ids.sample)
 pet.photo.attach(io: file, filename: "gonzo.jpg", content_type: "image/jpg")
 
 file = URI.open("app/assets/images/739.jpg")

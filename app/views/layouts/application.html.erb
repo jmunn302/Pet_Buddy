@@ -18,6 +18,8 @@
     <%= yield %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+    <% unless current_page?(root_path) %>
     <%= render partial: "layouts/navbar" %>
+    <% end %>
   </body>
 </html>

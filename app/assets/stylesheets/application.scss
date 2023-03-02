@@ -13,6 +13,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
 
+body {
+  padding-top: 0;
+}
+
 .logo {
 
     color: white;
@@ -23,13 +27,32 @@
     margin-right: 30%;
     margin-left: 2%;
     text-decoration: none;
+
+    a:hover {
+      text-decoration: none;
+      color: white;
+
+    }
   }
 
   .blobby-icon {
 
     a {
     margin-left: 80%;
+
+    img {
+      width: 8%;
+      transition: .5s ease-in-out;
+    }
   }
+  }
+
+  .blobby-icon:hover {
+    a {
+      img {
+      width: 8.5%;
+    }
+   }
   }
 
 $mynewcolor: #F4CED7;

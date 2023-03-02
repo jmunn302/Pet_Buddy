@@ -10,7 +10,9 @@
 <% @pets.each do |pet| %>
   <div class="pet-card my-3 mx-3" >
   <h4><%= link_to pet.name, pet_path(pet) %> </h4>
-  <img src="<%= pet.photo.url %>">
+  <% if pet.photo.key != nil %>
+    <%= cl_image_tag pet.photo.key %>
+  <% end %>
   <div class="pet-text">
   <div class="d-flex justify-content-around">
   <p class="card-text"><strong>Species:</strong> <%= pet.species %> <p>

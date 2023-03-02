@@ -13,9 +13,7 @@
                     required: true,
                     autofocus: true,
                     input_html: { autocomplete: "email" }%>
-        <%= f.input :password,
-                    required: true %>
-        <%= f.input :password_confirmation,
+        <%= f.input :encrypted_password,
                     required: true %>
         <%= f.input :first_name,
                     required: true %>
@@ -24,8 +22,8 @@
         <%= f.input :bio,
                     required: false %>
         <%= f.input :address,
-                    required: false %>
-        <%= cl_image_upload_tag(:image_id) %>
+                    required: true %>
+        <%= f.input :photo, as: :file %>
       </div>
       </div>
       <div class="col-4">

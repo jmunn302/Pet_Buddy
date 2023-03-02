@@ -5,9 +5,8 @@
   .full-page {
     margin: 0 0;
     height: 100vh;
-    padding-top: 200px;
     flex-direction: column;
-    background-image: url("https://res.cloudinary.com/dobohmdlf/image/upload/v1677583362/funny-play-dough-shapes_q7ezrr.jpg");
+    background-image: url("https://res.cloudinary.com/dobohmdlf/image/upload/v1677763572/funny-play-dough-shapes_edit_jpqg8f.jpg");
     background-size: cover;
     background-position: center;
   }
@@ -16,17 +15,13 @@
     font-family: 'Quicksand', sans-serif;
     color: whitesmoke;
     font-size: 5em;
-    margin-left: 150px;
     left: 1em;
     margin-bottom: 30px;
+    padding-top: 15%;
   }
 
   p {
     font-size: 1.5em;
-  }
-
-  .button-container {
-    margin-left: 180px;
   }
 
   .btn-custom {
@@ -38,7 +33,7 @@
     color: whitesmoke;
   }
 
-.btn-custom:hover {
+.btn:hover {
   background-color: #c88894;
   border-color: #c88894;
   border-radius: 6%;
@@ -53,8 +48,6 @@
 }
 
 .btn-primary_2 {
-  margin-left: 1110px;
-  margin-top: 150px;
   background-color: #e1abb6;
   border-color: #ccaab1;
   border-radius: 6%;

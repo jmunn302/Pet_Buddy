@@ -21,7 +21,7 @@ class PetsController < ApplicationController
 
   def create
     @pet = Pet.new(pet_params)
-
+    @pet.user_id = current_user.id
     if @pet.save
       redirect_to @pet, notice: "Your pet was successfully added."
     else
@@ -52,6 +52,6 @@ class PetsController < ApplicationController
   end
 
   def pet_params
-    params.require(:pet).permit(:name, :species, :age, :gender, :description, :special_notes, :price)
+    params.require(:pet).permit(:name, :species, :age, :gender, :description, :special_notes, :price, :photo)
   end
 end

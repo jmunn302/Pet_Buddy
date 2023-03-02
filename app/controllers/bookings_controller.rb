@@ -2,9 +2,14 @@ class BookingsController < ApplicationController
   before_action :set_pet, only: [:new, :create]
   before_action :set_booking, only: [:show]
 
+  def index
+    @bookings = Booking.all
+    @bookings = policy_scope(Booking)
+  end
+
   def new
     @pet = Pet.find(params[:pet_id])
-    @booking = Booking.new(start_date: Date.today, end_date: Date.today)
+    @booking = Booking.new(start_date: Date.today, end_date: Date.today, accepted: false)
     authorize @booking
   end
 
@@ -23,6 +28,18 @@ class BookingsController < ApplicationController
 
   def show
     authorize @booking
+  end
+
+  def accept
+    @booking.accepted = true
+    @booking.save
+    redirect_to @booking.pet, notice: 'Booking was accepted.'
+  end
+
+  def reject
+    @booking.accepted = false
+    @booking.save
+    redirect_to @booking.pet, notice: 'Booking was rejected.'
   end
 
   private

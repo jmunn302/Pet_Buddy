@@ -51,7 +51,7 @@ p {
 #pets-banner {
   background-image: url("https://res.cloudinary.com/dobohmdlf/image/upload/v1677597321/funny-play-dough-shapes_1_ulljgy.png");
   background-size: contain;
-  height: 350px;
+  height: 400px;
   background-color: #e1abb6;
   background-repeat: no-repeat;
   background-position-x: right;
@@ -63,6 +63,8 @@ p {
     h1 {
       color: whitesmoke;
       width: 65%;
-      font-size: 4em;
+      font-size: 3em;
+      padding-left: 10%;
+      padding-bottom: 10%;
     }
 }

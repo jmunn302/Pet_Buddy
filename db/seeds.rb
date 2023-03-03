@@ -98,4 +98,32 @@ file = URI.open("app/assets/images/elf28.png")
 pet = Pet.create!(name: Faker::Creature::Dog.name, species: "Gnome", gender: Faker::Gender.type, age: Faker::Number.number(digits: 2), description: "Writes beat poetry, and then performs it via interpretive dance.", special_notes: "Never wakes up before 10 am.", price: Faker::Number.number(digits: 2), user_id: ids.sample)
 pet.photo.attach(io: file, filename: pet.name, content_type: "image/png")
 
+file = URI.open("app/assets/images/608_720.jpg")
+pet = Pet.create!(name: "Isa", species: "Monster", gender: "Female", age: 28, description: "Super sweet and smart teacher who loves to sing karaoke especially with her special microphone", special_notes: "Loves Margaritas", price: Faker::Number.number(digits: 2), user_id: ids.sample)
+pet.photo.attach(io: file, filename: "isa.jpg", content_type: "image/jpg")
+
+file = URI.open("app/assets/images/608_720.jpg")
+pet = Pet.create!(name: "Emi", species: "Monster", gender: "Female", age: 29, description: "Super high energy and always loves controversial topics", special_notes: "Needs a dogfriendly household because she doesn't travel without Carlota!", price: Faker::Number.number(digits: 2), user_id: ids.sample)
+pet.photo.attach(io: file, filename: "emi.jpg", content_type: "image/jpg")
+
+file = URI.open("app/assets/images/fun-unicorn-3d-illustration.jpg")
+pet = Pet.create!(name: "Agos", species: "Unicorn", gender: "Female", age: 24, description: "xxx", special_notes: "xxx", price: Faker::Number.number(digits: 2), user_id: ids.sample)
+pet.photo.attach(io: file, filename: "agos.jpg", content_type: "image/jpg")
+
+file = URI.open("app/assets/images/cute-monster.jpg")
+pet = Pet.create!(name: "Juliette", species: "Fur Monster", gender: "Female", age: 25, description: "xxx", special_notes: "xxx", price: Faker::Number.number(digits: 2), user_id: ids.sample)
+pet.photo.attach(io: file, filename: "juliette.jpg", content_type: "image/jpg")
+
+file = URI.open("app/assets/images/cute-monster.jpg")
+pet = Pet.create!(name: "Lancelot", species: "Lizard", gender: "Male", age: 25, description: "xxx", special_notes: "xxx", price: Faker::Number.number(digits: 2), user_id: ids.sample)
+pet.photo.attach(io: file, filename: "lancelot.jpg", content_type: "image/jpg")
+
+file = URI.open("app/assets/images/3d-rendering-yeti.jpg")
+pet = Pet.create!(name: "Amine", species: "Yeti", gender: "Male", age: 32, description: "xxx", special_notes: "xxx", price: Faker::Number.number(digits: 2), user_id: ids.sample)
+pet.photo.attach(io: file, filename: "Amine.jpg", content_type: "image/jpg")
+
+file = URI.open("app/assets/images/fun-dinosaur-3d-illustration.jpg")
+pet = Pet.create!(name: "Noah", species: "Monster", gender: "Male", age: 19, description: "This weird green monster is obsessed with football and loves to play chess during lectures.", special_notes: "Can be really annoying", price: Faker::Number.number(digits: 2), user_id: ids.sample)
+pet.photo.attach(io: file, filename: "Noah.jpg", content_type: "image/jpg")
+
 puts "I'm done, yay!"

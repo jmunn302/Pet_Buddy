@@ -53,7 +53,6 @@
               <tr>
                 <th>Start Date</th>
                 <th>End Date</th>
-                <th>User</th>
                 <th>Status</th>
                 <th></th>
               </tr>
@@ -63,7 +62,6 @@
                 <tr>
                   <td><%= booking.start_date %></td>
                   <td><%= booking.end_date %></td>
-                  <td><%= booking.user.email %></td>
                   <td>
                     <% if booking.accepted? %>
                       <span class="badge badge-success">Accepted</span>

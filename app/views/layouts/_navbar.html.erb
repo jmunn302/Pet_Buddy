@@ -5,9 +5,16 @@
 
   </div>
     <form class="d-flex mx-auto">
-      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-light" type="submit">Search</button>
+    <%= form_with url: pets_path, method: :get, class: "form-control me-2" do %>
+          <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Find a movie"
+      %>
+      <%= submit_tag "Search", class: "btn btn-primary" %>
+    <% end %>
     </form>
+
     <div class="blobby-icon">
 
 

@@ -20,7 +20,7 @@ class BookingsController < ApplicationController
     authorize @booking
 
     if @booking.save
-      redirect_to @booking.pet, notice: 'Booking was successfully created.'
+      redirect_to user_path(current_user), notice: 'Booking was successfully created.'
     else
       render :new
     end

@@ -5,7 +5,7 @@ class CreateBookings < ActiveRecord::Migration[7.0]
       t.references :user, null: false, foreign_key: true
       t.integer :start_date
       t.integer :end_date
-      t.boolean :pending
+      t.boolean :accepted
 
       t.timestamps
     end

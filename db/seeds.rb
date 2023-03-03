@@ -9,14 +9,15 @@ puts 'Deleting db'
 Booking.destroy_all
 Pet.destroy_all
 User.destroy_all
-
+address = Faker::Address.full_address
+country = Faker::Address.country
 
 
 require "open-uri"
 
 18.times do
   file = URI.open("https://source.unsplash.com/random/300x300/?face")
-  user = User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email: Faker::Internet.email, password: Faker::Internet.password(min_length: 8), address: Faker::Address.full_address, bio: Faker::Lorem.paragraphs(number: 1) )
+  user = User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email: Faker::Internet.email, password: Faker::Internet.password(min_length: 8), address: "68 Shore Drive Brewster NY 10509 USA" , bio: Faker::Lorem.paragraphs(number: 1) )
   user.photo.attach(io: file, filename: user.first_name, content_type: "image/jpg")
 end
 
@@ -102,28 +103,28 @@ file = URI.open("app/assets/images/608_720.jpg")
 pet = Pet.create!(name: "Isa", species: "Monster", gender: "Female", age: 28, description: "Super sweet and smart teacher who loves to sing karaoke especially with her special microphone", special_notes: "Loves Margaritas", price: Faker::Number.number(digits: 2), user_id: ids.sample)
 pet.photo.attach(io: file, filename: "isa.jpg", content_type: "image/jpg")
 
-file = URI.open("app/assets/images/608_720.jpg")
+file = URI.open("app/assets/images/tsundzukani-mabaso-rainbow-horn-fifth-pass.jpg")
 pet = Pet.create!(name: "Emi", species: "Monster", gender: "Female", age: 29, description: "Super high energy and always loves controversial topics", special_notes: "Needs a dogfriendly household because she doesn't travel without Carlota!", price: Faker::Number.number(digits: 2), user_id: ids.sample)
 pet.photo.attach(io: file, filename: "emi.jpg", content_type: "image/jpg")
 
 file = URI.open("app/assets/images/fun-unicorn-3d-illustration.jpg")
-pet = Pet.create!(name: "Agos", species: "Unicorn", gender: "Female", age: 24, description: "xxx", special_notes: "xxx", price: Faker::Number.number(digits: 2), user_id: ids.sample)
+pet = Pet.create!(name: "Agos", species: "Unicorn", gender: "Female", age: 24, description: "Super strong, super smart, super funny - the whole package! Just don't mess with her, she can beat you up!", special_notes: "Needs space to do crossfit daily", price: Faker::Number.number(digits: 2), user_id: ids.sample)
 pet.photo.attach(io: file, filename: "agos.jpg", content_type: "image/jpg")
 
 file = URI.open("app/assets/images/cute-monster.jpg")
-pet = Pet.create!(name: "Juliette", species: "Fur Monster", gender: "Female", age: 25, description: "xxx", special_notes: "xxx", price: Faker::Number.number(digits: 2), user_id: ids.sample)
+pet = Pet.create!(name: "Juliette", species: "Fur Monster", gender: "Female", age: 25, description: "Stylish, tall, smart and very french! In a good way.", special_notes: "Will talk politics, if asked", price: Faker::Number.number(digits: 2), user_id: ids.sample)
 pet.photo.attach(io: file, filename: "juliette.jpg", content_type: "image/jpg")
 
-file = URI.open("app/assets/images/cute-monster.jpg")
-pet = Pet.create!(name: "Lancelot", species: "Lizard", gender: "Male", age: 25, description: "xxx", special_notes: "xxx", price: Faker::Number.number(digits: 2), user_id: ids.sample)
+file = URI.open("app/assets/images/mickael-lelievre-pukypuky-03.jpg")
+pet = Pet.create!(name: "Lancelot", species: "Lizard", gender: "Male", age: 25, description: "The friendliest lizard monster around. This guy will be the life of the party, and always make you laugh. Just don't ask him to speak Spanish... or Dutch!", special_notes: "Belgian, even though he sounds French", price: Faker::Number.number(digits: 2), user_id: ids.sample)
 pet.photo.attach(io: file, filename: "lancelot.jpg", content_type: "image/jpg")
 
 file = URI.open("app/assets/images/3d-rendering-yeti.jpg")
-pet = Pet.create!(name: "Amine", species: "Yeti", gender: "Male", age: 32, description: "xxx", special_notes: "xxx", price: Faker::Number.number(digits: 2), user_id: ids.sample)
+pet = Pet.create!(name: "Amine", species: "Yeti", gender: "Male", age: 32, description: "This fun loving Yeti loves to ski and to travel, and can give you a great tour of Madrid if you're new in town!", special_notes: "Don't ask him to do your taxes...", price: Faker::Number.number(digits: 2), user_id: ids.sample)
 pet.photo.attach(io: file, filename: "Amine.jpg", content_type: "image/jpg")
 
 file = URI.open("app/assets/images/fun-dinosaur-3d-illustration.jpg")
-pet = Pet.create!(name: "Noah", species: "Monster", gender: "Male", age: 19, description: "This weird green monster is obsessed with football and loves to play chess during lectures.", special_notes: "Can be really annoying", price: Faker::Number.number(digits: 2), user_id: ids.sample)
+pet = Pet.create!(name: "Noah", species: "Monster", gender: "Male", age: 19, description: "This weird green monster is obsessed with football and loves to play chess during lectures (just kidding!).", special_notes: "Can be really annoying", price: Faker::Number.number(digits: 2), user_id: ids.sample)
 pet.photo.attach(io: file, filename: "Noah.jpg", content_type: "image/jpg")
 
 puts "I'm done, yay!"

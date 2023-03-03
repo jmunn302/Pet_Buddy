@@ -37,7 +37,7 @@
         <% @user.pets.each do |pet| %>
           <h4 class="mb-3 mt-2"> <%= pet.name %> </h4>
           <%= link_to pet_path(pet) do%>
-          <div class="mb-1 h-75 shadow pet_card rounded-5 border border-primary border-3" style="background-color: white">
+          <div class="mb-1 h-auto shadow pet_card rounded-5 border border-primary border-3" style="background-color: white">
           <% if pet.photo.key != nil %>
           <%= cl_image_tag pet.photo.key, class: "mb-4 bg-white rounded-bottom rounded-5 w-100 h-100", style: "object-fit: cover" %>
           <% end %>

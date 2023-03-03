@@ -4,6 +4,11 @@ class PetsController < ApplicationController
   def index
     @pets = Pet.all
     @pets = policy_scope(Pet)
+    if params[:query].present?
+      @pets = Pet.where("species ILIKE ?", "%#{params[:query]}%")
+    else
+      @pets = Pet.all
+    end
   end
 
   def show

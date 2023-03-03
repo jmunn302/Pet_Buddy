@@ -8,6 +8,13 @@ class PetsController < ApplicationController
 
   def show
     authorize @pet
+    @pet_markers = {
+        lat: @pet.user.latitude,
+        lng: @pet.user.longitude,
+        # info_window_html: render_to_string(partial: "info_window", locals: {pet: @pet}),
+        marker_html: render_to_string(partial: "pet_marker")
+    }
+
   end
 
   def new

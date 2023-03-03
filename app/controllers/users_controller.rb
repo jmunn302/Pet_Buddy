@@ -8,6 +8,7 @@ class UsersController < ApplicationController
         info_window_html: render_to_string(partial: "info_window", locals: {user: @user}),
         marker_html: render_to_string(partial: "marker")
     }
+
   end
 
   def index

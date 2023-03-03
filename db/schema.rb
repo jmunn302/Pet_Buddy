@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema[7.0].define(version: 2023_03_02_105826) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_02_103048) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -42,7 +41,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_02_105826) do
     t.string "variation_digest", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
-  # la
+
   create_table "bookings", force: :cascade do |t|
     t.bigint "pet_id", null: false
     t.bigint "user_id", null: false
@@ -51,8 +50,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_02_105826) do
     t.datetime "updated_at", null: false
     t.date "end_date"
     t.date "start_date"
-    t.boolean "rejected"
-    t.boolean "pending"
     t.index ["pet_id"], name: "index_bookings_on_pet_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end

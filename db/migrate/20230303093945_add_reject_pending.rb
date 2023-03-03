@@ -1,0 +1,6 @@
+class AddRejectPending < ActiveRecord::Migration[7.0]
+  def change
+    add_column :bookings, :pending, :boolean
+    add_column :bookings, :rejected, :boolean
+  end
+end

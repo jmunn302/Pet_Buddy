@@ -9,8 +9,7 @@ puts 'Deleting db'
 Booking.destroy_all
 Pet.destroy_all
 User.destroy_all
-address = Faker::Address.full_address
-country = Faker::Address.country
+
 
 
 require "open-uri"
@@ -20,6 +19,13 @@ require "open-uri"
   user = User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email: Faker::Internet.email, password: Faker::Internet.password(min_length: 8), address: "68 Shore Drive Brewster NY 10509 USA" , bio: Faker::Lorem.paragraphs(number: 1) )
   user.photo.attach(io: file, filename: user.first_name, content_type: "image/jpg")
 end
+
+
+  file = URI.open("app/assets/images/Julie.jpeg")
+  user = User.create(first_name: "Julie", last_name: "Munn", email: "jmunnmdesign@gmail.com", encrypted_password: "Arizona1!", address: "76 16th St Brooklyn NY 11215 USA" , bio: "Creative living in Madrid, looking to make friends!" )
+  user.photo.attach(io: file, filename: user.first_name, content_type: "image/jpg")
+
+
 
 @users = User.all
 ids = []
@@ -126,5 +132,14 @@ pet.photo.attach(io: file, filename: "Amine.jpg", content_type: "image/jpg")
 file = URI.open("app/assets/images/fun-dinosaur-3d-illustration.jpg")
 pet = Pet.create!(name: "Noah", species: "Monster", gender: "Male", age: 19, description: "This weird green monster is obsessed with football and loves to play chess during lectures (just kidding!).", special_notes: "Can be really annoying", price: Faker::Number.number(digits: 2), user_id: ids.sample)
 pet.photo.attach(io: file, filename: "Noah.jpg", content_type: "image/jpg")
+
+file = URI.open("app/assets/images/3d-rendering-yeti-copy.jpg")
+pet = Pet.create!(name: Faker::Creature::Cat.name, species: "Yeti", gender: Faker::Gender.type, age: Faker::Number.number(digits: 2), description: "A fun loving Yeti who will bring joy to your life! He loves music, giving gifts, and doing yoga every morning.", special_notes: "Very Introverted", price: Faker::Number.number(digits: 2), user_id: ids.sample)
+pet.photo.attach(io: file, filename: pet.name, content_type: "image/jpg")
+
+file = URI.open("app/assets/images/cute-monster1.jpg")
+pet = Pet.create!(name: "Nicole", species: "Fuzzy Monster", gender: "Female", age: 25, description: "Smart and colorful monster, who will teach you data and also take you to the most delicious vegan lunch!", special_notes: "Needs occasional lunchtime nap", price: Faker::Number.number(digits: 2), user_id: ids.sample)
+pet.photo.attach(io: file, filename: "Nicole.jpg", content_type: "image/jpg")
+
 
 puts "I'm done, yay!"

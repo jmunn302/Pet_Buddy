@@ -42,6 +42,10 @@ class BookingsController < ApplicationController
     redirect_to @booking.pet, notice: 'Booking was rejected.'
   end
 
+  def edit
+    authorize @booking
+  end
+
   private
 
   def set_pet

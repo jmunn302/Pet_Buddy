@@ -68,3 +68,55 @@ footer {
   background-color: #68b3d9;
   color: white;
 }
+
+.pet_card{
+    a{
+  color: black;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  }
+}
+
+table {
+  width: 100%;
+  margin: 0;
+}
+
+th {
+  height: 40px;
+  text-align: left;
+  padding: 5px;
+  background-color: $mynewcolor;
+}
+
+tr {
+  height: 30px;
+  text-align: left;
+}
+
+tr:nth-child(even) {
+  background-color: #f7e3e7;
+}
+
+td {
+  padding: 10px;
+  font-size: 14px;
+
+}
+
+.pet_button {
+  a {
+    color: #c88894;
+    text-decoration: none;
+  }
+}
+
+.pet_button:hover {
+  a {
+    color: white;
+  }
+}
